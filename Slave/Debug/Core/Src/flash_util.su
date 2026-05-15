@@ -1,0 +1,2 @@
+../Core/Src/flash_util.c:20:19:Flash_Write_Block	48	static
+../Core/Src/flash_util.c:44:6:Flash_Erase_Sector	40	static

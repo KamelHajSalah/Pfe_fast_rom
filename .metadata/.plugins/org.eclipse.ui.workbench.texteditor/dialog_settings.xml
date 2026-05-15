@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value=".bss"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value=".bss"/>
+			<item value="memory"/>
+			<item value="SRAM4"/>
+			<item value="void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)&#x0A;{&#x0A;    if (huart-&gt;Instance == USART3)&#x0A;    {&#x0A;        // PAS de SCB_InvalidateDCache_by_Addr → buffers en RAM_D3 non-cacheable&#x0A;&#x0A;        SpiFrame_t *temp = uart_rx_ptr;&#x0A;        uart_rx_ptr = spi_tx_ptr;&#x0A;        spi_tx_ptr = temp;&#x0A;&#x0A;        HAL_UART_Receive_DMA(&amp;huart3, (uint8_t*)uart_rx_ptr, sizeof(SpiFrame_t));&#x0A;        uart_rx_ready = 1;&#x0A;    }&#x0A;}"/>
+			<item value="MX_USART3_UART_Init"/>
+			<item value="HAL_NVIC_SetPriority"/>
+			<item value="if (nss_triggered)"/>
+			<item value="HAL_SPI_MspInit"/>
+			<item value="GPIO_MODE_IT_RISING"/>
+			<item value="HAL_SPI_Receive_DMA"/>
+			<item value="hspi1.Init.NSSPMode"/>
+			<item value="MX_SPI2_Init"/>
+			<item value="SCB_CleanDCache"/>
+			<item value="spi_send_block"/>
+			<item value="HAL_SPI_Receive"/>
+		</list>
+		<list key="replacehistory">
+			<item value="spi_send_block_516"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1171"/>
+		<item key="DIALOG_Y_ORIGIN" value="473"/>
+		<item key="DIALOG_WIDTH" value="414"/>
+		<item key="DIALOG_HEIGHT" value="325"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="646"/>
+		<item key="DIALOG_Y_ORIGIN" value="409"/>
+	</section>
+</section>
