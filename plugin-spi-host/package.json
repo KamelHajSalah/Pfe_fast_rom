@@ -1,0 +1,61 @@
+{
+  "name": "plugin-spi-host",
+  "displayName": "Plugin SPI_HOST",
+  "description": "Flash tool for FastROM SPI Bridge (H7 to G4)",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "plugin-spi-host.flash",
+        "title": "FastROM: Flash Firmware",
+        "category": "FastROM",
+        "icon": "$(zap)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "plugin-spi-host.flash",
+          "group": "navigation"
+          
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "plugin-spi-host.flash",
+          "group": "z_fastrom",
+          "when": "resourceExtname == .bin"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.80.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0",
+    "@types/serialport": "^8.0.5"
+  },
+  "dependencies": {
+    "serialport": "^13.0.0"
+  }
+}
